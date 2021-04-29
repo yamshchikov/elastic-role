@@ -10,6 +10,7 @@
     until: get_elastic is succeeded
     tags: elastic
   - name: Create directrory for Elasticsearch
+    become: true
     file:
       state: directory
       path: "{{ elastic_home }}"
